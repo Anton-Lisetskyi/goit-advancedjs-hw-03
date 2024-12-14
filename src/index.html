@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><goit-advancedjs-hw-03></title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.11.0/simple-lightbox.min.css">
+</head>
 
-    <load src="./partials/footer.html" />
+<body>
+  <main>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+    <form id="search-form" class="search-form">
+      <input type="text" name="search" placeholder="Search for images..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <p class="not-found-img" style="display: none;">No images found!</p>
+
+    <ul class="images-div">
+    </ul>
+
+    <div class="loaderClass" style="display: none;">
+      <span>Loading...</span>
+    </div>
+  </main>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
